@@ -1,0 +1,8 @@
+{
+  "name": "Geostorm",
+  "app_id": "fab1e86a",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
