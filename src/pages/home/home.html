@@ -8,13 +8,16 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-<h1> This is a city: {{city == null ? true : false}}</h1>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="center">
+    <header>
+      <h1>MyWeatherApp</h1>
+      <h3>{{city}}</h3>
+    </header>
+    <main>
+      <button ion-button secondary menuToggle>Toggle Menu</button>
+    </main>
+    <footer class="footer">
+      <p>Created by <a href="#" target="_blank">Jemi</a> and <a href="https://www.genron.ch" target="_blank">Genron</a></p>
+    </footer>
+  </div>
 </ion-content>

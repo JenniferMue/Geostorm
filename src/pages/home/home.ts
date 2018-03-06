@@ -9,7 +9,6 @@ import {RestDataProvider} from "../../providers/rest-data/rest-data";
 export class HomePage {
   background_mood: any;
   city: any;
-  jenni: string;
   current_weather_all:any;
   current_weather:any;
   current_hours:any;
@@ -20,7 +19,6 @@ export class HomePage {
   weather_data_list:any;
 
   constructor(public navCtrl: NavController, public restProvider: RestDataProvider) {
-    this.jenni = "jenni";
     this.getData();
     this.getCurrent();
     this.getCurrentHour();
@@ -35,6 +33,7 @@ export class HomePage {
   }
     getData(){
     this.restProvider.getForecastData().then(data=>{
+      console.log("-------------------> " + data === null);
       this.weather_data = data;
       this.city = this.weather_data.city.name;
       this.weather_data_list = this.weather_data.list;

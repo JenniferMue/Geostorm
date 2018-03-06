@@ -9,12 +9,13 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class RestDataProvider {
-  apiUrl_forecast:any =
+  apiUrl_forecast: any =
     'http://api.openweathermap.org/data/2.5/forecast/daily?id=7287650&units=metric&cnt=7&APPID=' +
-    '4ce8104475f246a537c2408411acbcb3';
-  apiUrl_current:any =
+    'fb7d210f276e006391ca0851fdbb3e7a';
+    // '4ce8104475f246a537c2408411acbcb3';
+  apiUrl_current: any =
     'http://api.openweathermap.org/data/2.5/weather?id=7287650&units=metric&cnt=7&APPID=' +
-    '4ce8104475f246a537c2408411acbcb3';
+    'fb7d210f276e006391ca0851fdbb3e7a';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestDataProvider Provider');
