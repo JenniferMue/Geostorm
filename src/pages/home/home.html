@@ -6,10 +6,19 @@
     <ion-title></ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding [ngStyle]="{'background-image':'url((assets/imgs/' + background_mood + ')'}" style="background-repeat: no-repeat; background-size: cover;">
+<ion-content padding [ngStyle]="{'background-image':'url(assets/imgs/' + background_mood + ')'}" style="background-repeat: no-repeat; background-size: cover;">
   <div style="text-align: center;">
     <h2 class="light-color">{{city}}</h2>
     <p class="light-color" style="font-size:16px; margin:0">{{description}}</p>
     <h2 class="light-color" style="font-size:64px; margin-bottom:20px">{{current_weather}}&#176;</h2>
   </div>
+  <ion-item *ngFor="let d of weather_data_list" style="background-color: rgba(0, 0, 0, 0.2);" class="light-color">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8><h2>{{data.dt * 1000 | date:'EEEE'}}</h2></ion-col>
+        <ion-col col-2><h2 style="color: #c6f7ff;">{{data.temp.min}}</h2></ion-col>
+        <ion-col col-2><h2 style="color: #ffcec1;">{{data.temp.max}}</h2></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
 </ion-content>
