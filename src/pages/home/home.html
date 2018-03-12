@@ -1,23 +1,15 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-shadow>
+  <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <div class="center">
-    <header>
-      <h1>MyWeatherApp</h1>
-      <h3>{{city}}</h3>
-    </header>
-    <main>
-      <button ion-button secondary menuToggle>Toggle Menu</button>
-    </main>
-    <footer class="footer">
-      <p>Created by <a href="#" target="_blank">Jemi</a> and <a href="https://www.genron.ch" target="_blank">Genron</a></p>
-    </footer>
+<ion-content padding [ngStyle]="{'background-image':'url((assets/imgs/' + background_mood + ')'}" style="background-repeat: no-repeat; background-size: cover;">
+  <div style="text-align: center;">
+    <h2 class="light-color">{{city}}</h2>
+    <p class="light-color" style="font-size:16px; margin:0">{{description}}</p>
+    <h2 class="light-color" style="font-size:64px; margin-bottom:20px">{{current_weather}}&#176;</h2>
   </div>
 </ion-content>
